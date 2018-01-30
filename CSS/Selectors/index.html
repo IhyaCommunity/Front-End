@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectors and Combinators</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            background-color: darkolivegreen;
+            font-size: 1.4rem;
+            margin: 1rem;
+        }
+
+        .container {
+            border: 2px solid #555;
+        }
+
+        .container > .box {
+            display: inline-block;
+        }
+
+        a[title] {
+            color: purple;
+        }
+
+        /* a[href="#"] {
+            color: red;
+        } */
+
+        /* h1 + .box {
+            background-color: #000;
+        } */
+
+        /* h1 ~ .box {
+            background-color: #000;
+        } */
+
+        /* p::first-line {
+            color: #888;
+        } */
+
+        /* .container .box:first-child {
+            background-color: orange;
+        } */
+
+        /* .container .box:last-child {
+            background-color: orange;
+        } */
+
+        /* .container .box:nth-child(2n+2) {
+            background-color: orange;
+        } */
+
+        /* .container .box:not(div) {
+            background-color: #900;
+        } */
+
+        /* .container p.box {
+            background-color: #900;
+        } */
+
+        /* .container .box:first-of-type {
+            background-color: #900;
+        } */
+
+        /* .container .box:last-of-type {
+            background-color:#900;
+        } */
+/* 
+        .container .box:nth-of-type(2) {
+            background-color: #900;
+        } */
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Some Heading</h1>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+
+    <a href="#" title="Some Link">A Link to Somewhere</a>
+    <!-- <a href="#" title="Some Other Link">A Link to Somewhere else</a> -->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deleniti tenetur facilis vel. Vel ratione nobis assumenda corrupti. Molestiae sed rem eligendi, et neque ea aperiam! Ullam impedit excepturi vero. <br>
+        Enim at sequi, impedit labore quos quia officia! Dolore libero nam nostrum praesentium, commodi nemo repellat maiores nisi quidem consequuntur nulla qui.</p>
+
+    <div class= "container">
+        <p class="box">Box 1</p>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+        <div class="box">Box 7</div>
+        <div class="box">Box 8</div>
+    </div>
+
+</body>
+</html>
