@@ -1,0 +1,7 @@
+/* Feature Queries */
+
+@supports (display: flex) {
+    main {
+        display: flex;
+    }
+}

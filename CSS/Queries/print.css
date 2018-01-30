@@ -1,0 +1,15 @@
+/* Print Queries */
+
+@media print {
+    h1 {
+        color: darkolivegreen;
+    }
+
+    p {
+        color: darkorange;
+    }
+
+    .box {
+        display: none;
+    }
+}
