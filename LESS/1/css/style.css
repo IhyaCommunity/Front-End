@@ -1,0 +1,19 @@
+body {
+    background-color: #9fb4be
+}
+
+.container {
+    display: flex;
+    justify-content: space-between
+}
+
+.container div {
+    height: 250px;
+    width: 250px;
+    background-color: #263238
+}
+
+.container div a {
+    color: white;
+    background-color: #4f6875
+}
