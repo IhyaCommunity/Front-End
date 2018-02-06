@@ -1,0 +1,28 @@
+// Variables
+@bg-color: #263238;
+@size: 250px;
+
+body {
+    background-color: lighten(@bg-color, 40%); // Brightness functions
+}
+
+// Nesting
+
+.container {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        height: @size;
+        width: @size;
+        background-color: @bg-color;
+        a {
+            color: white;
+            background-color: lighten(@bg-color, 20%);
+        }
+
+        &:hover {
+            background-color: darken(@bg-color, 20%);
+        }
+    }
+}
