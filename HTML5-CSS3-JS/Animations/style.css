@@ -1,0 +1,40 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: darkolivegreen;
+    position: relative;
+    margin: 2rem;
+    animation: 4s four-directions;
+}
+
+@keyframes four-directions {
+    0% {
+        background-color: #888;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: darkorange;
+        transform: rotate(80deg);
+        left: 400px;
+        top: 0px;
+    }
+    50% {
+        background-color: #888;
+        transform: rotate(160deg);
+        left: 400px;
+        top: 400px;
+    }
+    75% {
+        background-color: darkorange;
+        transform: rotate(80deg);
+        left: 0px;
+        top: 400px;
+    }
+    100% {
+        background-color: darkolivegreen;
+        transform: rotate(180deg);
+        top: 0px;
+        left: 0px;
+    }
+}
