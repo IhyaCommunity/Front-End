@@ -1,0 +1,44 @@
+@heading-color: #fff;
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.rounded-button(@color, @radius: 4px) {
+    border-bottom: 4px solid @color;
+    border-top-right-radius: @radius;
+    border-bottom-left-radius: @radius;
+
+    &:hover {
+        border-color: darken(@color, 40%);
+    }
+}
+
+.button {
+    // background-color: #222;
+    color: #fff;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+}
+
+.button-success {
+    @bg-color: #2c9c00;
+    
+    background-color: @bg-color;
+    .button;
+    .rounded-button(lighten(@bg-color, 40%));
+}
+
+.button-warning {
+    background-color: #9c0000;
+    .button;
+    .rounded-button(lighten(#9c0000, 40%), 8px);
+}
+
+.button-info {
+    background-color: #00569c;
+    .button;
+    .rounded-button(lighten(#00569c, 40%));
+}
