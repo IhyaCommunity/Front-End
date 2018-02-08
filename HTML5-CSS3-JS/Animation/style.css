@@ -1,0 +1,32 @@
+.container {
+    height: 500px;
+    width: 850px;
+    background-color: #ddd;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(103, 33, 122);
+    border-radius: 50%;
+    animation: 1.2s ease infinite alternate upDown;
+}
+
+.circle:active {
+    background-color: #444;
+    animation-play-state: paused;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translate(0, 0) skewX(10deg);
+    }
+
+    50% {
+        transform: translate(350px, 350px);
+    }
+
+    100% {
+        transform: translate(700px, 0) skewX(-4deg);
+    }
+}
