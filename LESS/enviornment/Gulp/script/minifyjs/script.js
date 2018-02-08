@@ -1,0 +1,1 @@
+var x=10,y=5;x>y?console.log("x is greater then y"):console.log("y is greater then x");
