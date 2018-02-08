@@ -27,4 +27,7 @@ gulp.task('minifyJS', function () {
         .pipe(uglify())
         .pipe(gulp.dest('script/minifyjs'));
 });
+
+// image optimization
+// ...
  
