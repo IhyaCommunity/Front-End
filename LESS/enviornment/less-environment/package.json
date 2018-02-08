@@ -1,0 +1,18 @@
+{
+  "name": "less-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abuzar Mushtaq",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.4.0"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^3.9.2"
+  }
+}
