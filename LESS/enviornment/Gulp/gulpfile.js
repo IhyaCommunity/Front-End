@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var cleanCss = require('gulp-clean-css');
 var less = require('gulp-less');
 var uglify = require('gulp-uglify');
+var imgMin = require('gulp-imagemin');
 
 // minify css
 
@@ -29,5 +30,12 @@ gulp.task('minifyJS', function () {
 });
 
 // image optimization
+
+gulp.task('img-minify', function () {
+    gulp.src('img/ultra-hd/*.jpg')
+        .pipe(imgMin(
+            imgMin.jpegtran({ optimizationLevel: 1 })
+        ))
+        .pipe(gulp.dest('img/mini'));
+});
 // ...
- 
