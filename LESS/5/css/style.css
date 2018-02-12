@@ -1,0 +1,8 @@
+.img {
+  height: 1280px;
+  width: 800px;
+  background-image: url('../img/benjamin-davies.jpg');
+}
+.header {
+  background-image: url('../assets/images/background/file.jpg');
+}
