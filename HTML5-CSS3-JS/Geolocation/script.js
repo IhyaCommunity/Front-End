@@ -30,3 +30,6 @@ var options = {
 };
 
 navigator.geolocation.getCurrentPosition(success, error);
+
+// var positionWatch = navigator.geolocation.watchPosition(success, error);
+// navigator.geolocation.clearWatch(positionWatch);
