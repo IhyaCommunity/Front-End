@@ -8,12 +8,11 @@
   },
   "author": "Abuzar Mushtaq",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-clean-css": "^3.9.2",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-less": "^3.4.0"
-  },
-  "devDependencies": {
-    "gulp-clean-css": "^3.9.2"
   }
 }
