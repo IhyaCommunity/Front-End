@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Content Edit</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.4rem;
+        }
+
+        x-notepad {
+            display: block;
+            padding: 1rem;
+        }
+
+        x-notepad[data-edit='true'] {
+            background: #eee;
+        }
+    </style>
+
+    <!-- Full Screen Polyfill -->
+    <script src="node_modules/screenfull/dist/screenfull.js"></script>
+
+</head>
+<body>
+
+    <button id="enlarge">Full Screen</button>
+
+    <x-notepad>
+        <header>
+            <h2>Some Heading</h2>
+        </header>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, neque commodi in saepe eos qui iste temporibus, laborum facilis mollitia, beatae nostrum sapiente eaque fuga voluptate doloremque molestiae! Sequi, assumenda.</p>
+        <p>Molestias esse placeat itaque asperiores. Adipisci quas asperiores ipsa, iusto neque odio sunt reiciendis eius veritatis? Ea dicta enim incidunt ratione accusantium. Magni, ratione vel! Consectetur facilis obcaecati nulla vero?</p>
+        <p>Repudiandae ab iste quisquam cum itaque at sequi autem placeat sit fugiat sunt rerum ipsam animi distinctio accusamus labore quis, culpa voluptatibus. Perferendis ratione, corporis blanditiis facilis sed fugit expedita!</p>
+        <p>Veritatis labore nulla quas consequatur esse delectus ipsum temporibus recusandae facere possimus, ex illum porro dolor dolorum cumque odio doloremque assumenda sed incidunt atque, ullam optio? Vitae unde odit minima.</p>
+        <p>Nisi officia suscipit repellendus ex voluptatum iure qui incidunt quia. Placeat exercitationem unde dolorem animi labore officiis deserunt vero fuga repellat deleniti aut, tempore rem nesciunt error accusamus perferendis doloribus!</p>
+    </x-notepad>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
