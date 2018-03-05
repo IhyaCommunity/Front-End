@@ -4,11 +4,11 @@ var ctx = canvas.getContext('2d');
 // ctx.fillStyle = 'rgba(95, 202, 172, .5)';
 // ctx.fillRect(40, 40, 150, 150);
 
-var rect = new Path2D();
-rect.rect(20, 20, 150, 150);
+var path = new Path2D();
+path.rect(20, 20, 150, 150);
 
 ctx.fillStyle = '#67217A';
-ctx.fill(rect);
+ctx.fill(path);
 
 // ctx.strokeStyle = '#000';
 // ctx.lineWidth = 4;
