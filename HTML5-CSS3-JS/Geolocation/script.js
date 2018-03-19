@@ -1,8 +1,8 @@
 function success(pos) {
     var coords = pos.coords;
 
-    document.getElementById('latitude').innerText = coords.latitude;
-    document.getElementById('longitude').innerText = coords.longitude;
+    document.getElementById('latitude').textContent = coords.latitude;
+    document.getElementById('longitude').textContent = coords.longitude;
 
     alert(`Accuracy is more or less ${coords.accuracy} meters.`);
 };

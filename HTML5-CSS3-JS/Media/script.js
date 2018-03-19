@@ -11,11 +11,11 @@ document.getElementById('play').addEventListener('click', (ev) => {
 
     if (media.paused) {
         media.play();
-        playButton.innerHTML = '!ٹھہرو';
+        playButton.textContent = '!ٹھہرو';
     }
     else {
         media.pause();
-        playButton.innerHTML = '!چلو';
+        playButton.textContent = '!چلو';
     }
 
     ev.preventDefault();
