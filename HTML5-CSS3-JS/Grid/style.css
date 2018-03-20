@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222617;
+}
+
+.container {
+    border: 1px solid #ccc;
+}
+
+.box {
+    padding: 1rem;
+    background: #9fb1bf;
+}
+
+.box:nth-child(odd) {
+    background-color: #c3d6da;
+}
+
+.alt {
+    background-color: #467AA2 !important;
+}

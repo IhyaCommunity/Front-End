@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid: 9rem 8rem / 20rem 30rem 1fr;
+            /* grid: 9rem 8rem / 1fr 1fr 1fr; */
+            grid-gap: 1rem;
+            /* grid-auto-flow: column; */
+            /* grid-auto-columns: 8rem; */
+        }
+
+        .wide {
+            /* grid-row: 1 / 2;
+            grid-column:  2 / span 3; */
+            grid-area: 1 / 3 / 3 / 4;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+
+</body>
+
+</html>

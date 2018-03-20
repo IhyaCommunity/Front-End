@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .container {
+            display: grid;
+            /* grid: 8rem 8rem / 8rem 8rem 8rem 8rem; */
+            /* grid: 8rem 8rem / repeat(4, 8rem); */
+            grid-template-rows: 8rem 8rem;
+            grid-template-columns: 8rem 8rem 8rem 8rem;
+            grid-gap: 1rem;
+        }
+
+        .wide {
+            /* grid-row: 1 / 2;
+            grid-column:  2 / span 3; */
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: span 3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box alt wide">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+
+</body>
+
+</html>

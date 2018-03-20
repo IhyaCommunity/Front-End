@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .wrapper {
+            width: 90vw;
+            height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+            display: grid;
+            grid: 8rem 30rem auto 5rem / 18rem 2fr 1fr;
+            grid-gap: 1rem;
+            grid-template-areas: 
+                'header header header'
+                'sidebar main aside'
+                'empty main figure'
+                'footer footer footer';
+        }
+
+        header, footer {
+            background-color: #467AA2;
+        }
+
+        section, main, figure, aside {
+            background-color: #9fb1bf;
+        }
+
+        header {
+            /* grid-column: 1 / -1; */
+            grid-area: header;
+        }
+
+        section {
+            /* grid-row: 2 / 4;
+            grid-column: 1 / 2; */
+            grid-area: sidebar;
+        }
+
+        main {
+            /* grid-row: span 2; */
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+        figure {
+            grid-area: figure;
+        }
+
+        footer {
+            /* grid-row: 4;
+            grid-column: 1 / -1; */
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header>
+            <h2>Header</h2>
+        </header>
+
+        <section>
+            <h3>Section</h3>
+        </section>
+
+        <main>
+            <h3>Main</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente dolorum labore cumque quo asperiores corrupti nihil similique reprehenderit ut accusamus iusto maiores culpa, perspiciatis officia eligendi laudantium minima quis?</p>
+            <p>Asperiores eaque ipsum impedit? Deleniti rerum atque, sint nulla modi perferendis ipsa quae minus reprehenderit voluptatum ab cum iure quisquam magni quod, dicta quasi adipisci nihil voluptatem. Repellendus, ratione voluptates.</p>
+            <p>Iure harum nobis maxime, magnam dolore, et nostrum, voluptatum unde eaque itaque saepe! Tempore obcaecati nostrum eum eveniet quam. Sit necessitatibus consequuntur velit consequatur. Eius excepturi minus veniam assumenda doloremque.</p>
+            <p>Error, cupiditate possimus. Aspernatur excepturi maxime nostrum enim. Nam at, cumque fugit deleniti laudantium, ratione sed libero perferendis velit voluptatem corrupti itaque! Sed sint recusandae repellendus consequatur commodi odio a!</p>
+            <p>Veniam iste vero accusamus, dolores nisi repellat sit. Asperiores repellat eaque veniam voluptatibus sit cupiditate recusandae rem, ullam sint doloremque libero tempore, aperiam, officiis reprehenderit officia autem labore distinctio repellendus.</p>
+            <p>Non laboriosam ipsa sapiente maxime, illo ab eveniet autem id dicta sed minus natus atque placeat magnam laborum deleniti impedit! Adipisci, sapiente voluptas! Ab, illum in. Nam assumenda reprehenderit possimus!</p>
+            <p>Hic nobis nostrum eos id tempore assumenda voluptatem ad, provident non earum eligendi, cum aperiam quaerat optio labore impedit minus, a quod soluta. Labore, eum iure et dignissimos saepe fuga!</p>
+            <p>Nisi libero ab blanditiis expedita aliquam, est saepe tempore quae asperiores repellendus nobis aut id itaque temporibus mollitia corporis molestiae deleniti quasi. Rem soluta amet dolores aut autem porro atque.</p>
+            <p>Nemo, numquam odio eaque quos delectus autem aperiam voluptatibus libero nulla! Placeat delectus repellendus minima alias, veniam doloribus aut est, cum molestias perferendis asperiores facilis nesciunt amet, illo id facere?</p>
+            <p>Quibusdam id error illum quasi nobis dolor? Eaque quos qui neque fuga quae recusandae aperiam asperiores voluptate, obcaecati voluptates nostrum beatae sequi? Repellat consequatur, porro deleniti obcaecati accusamus quis explicabo?</p>
+            <p>Cum modi, tempora esse, omnis, ipsam impedit eaque alias magnam ut id error voluptatibus quasi? Impedit enim ratione voluptatibus deserunt laborum distinctio, modi optio iure inventore aut at sunt minima!</p>
+            <p>At sed vitae eaque velit nostrum ullam officia esse assumenda tempora molestiae perferendis corporis facilis aperiam consequatur ab sapiente dolor consequuntur doloremque eos ipsum aliquid ut, reprehenderit repudiandae facere! Cupiditate!</p>
+            <p>Tenetur eveniet commodi itaque, officiis mollitia ipsam dolor laboriosam culpa distinctio eius ducimus excepturi eos eaque labore sequi. Laudantium optio earum exercitationem magnam veritatis repellat molestiae. Placeat veritatis quos totam.</p>
+            <p>Ipsa temporibus nihil ipsam obcaecati, cupiditate repellat magnam maiores quas molestias nemo, facere autem distinctio. Magni eum ut neque accusantium repellat culpa delectus, aut modi odit ad perspiciatis repellendus amet!</p>
+            <p>Debitis laborum sit odit voluptates? Eum eaque, voluptatum velit tenetur est illo quidem repellendus, fugit delectus vero corporis dignissimos quos placeat, tempore at molestiae aliquid consectetur reiciendis dolore alias. Similique.</p>
+            <p>Vero debitis, ullam sint molestiae delectus at illo facere similique nihil autem quos temporibus nobis perspiciatis esse ducimus obcaecati eligendi eum consequuntur consequatur sapiente minima provident quasi rem. Reprehenderit, sapiente.</p>
+            <p>Numquam quae voluptate deserunt in libero et? Rerum, quaerat? Ipsum obcaecati, ratione enim perspiciatis vel eum consequuntur illo dolores voluptate dolorum voluptatibus! Deleniti quisquam vel consequuntur non incidunt ipsum fugit!</p>
+            <p>Itaque tempore nam praesentium nisi, modi qui, eum delectus iste id omnis molestiae, quis cum assumenda amet consectetur vitae quos ipsum voluptatem veniam sit tenetur minus eligendi. Earum, quo sunt.</p>
+            <p>Pariatur, voluptates, veritatis nisi asperiores dolorum expedita laborum eum facere repudiandae eos magni deserunt labore nam nobis minus voluptatibus sit provident impedit. Quo quam laudantium dolore dolorum dicta distinctio officiis!</p>
+            <p>Reprehenderit sint placeat autem nisi voluptatem aperiam, nobis ipsam enim! Debitis modi aliquid, libero eius numquam labore, atque at, distinctio natus alias doloremque provident possimus odio impedit neque consequuntur voluptates!</p>
+        </main>
+
+        <figure>
+            <h3>Figure</h3>
+        </figure>
+
+        <aside>
+            <h4>Aside</h4>
+        </aside>
+
+        <footer>
+            <h4>Footer</h4>
+        </footer>
+    </div>
+
+</body>
+</html>
