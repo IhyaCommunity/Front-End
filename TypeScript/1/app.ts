@@ -1,16 +1,34 @@
-// Types
+// Strong Typing
 
 let Name: string = "Arslan"; // string type
 let isDone: boolean = true; // boolean type
 let value: number = 100; // number type
+
 let Names: string[] = ["Zain", "Ali", "Arslan"]; // string array type
+let arr: Array<number> = [1, 2, 3]; // alternative
+
 let anyArray: any[] = [1, 2, 3, false, 'abc']; // any array type
 let typedArray: [number, string] = [123, 'abc']; // multi type array
-let arr: Array<number> = [1, 2, 3]; // number array type
+
 let multiType: number | string; // union type
 
 
-// Function
+
+// Types Assign 
+var Value;
+Value = 10;
+var isOk;
+isOk = false;
+
+console.log((<number>value)); // both technically same
+console.log((Value as number));
+
+console.log((<boolean>isOk));
+console.log((isOk as boolean));
+
+
+
+// Types in Function
 
 function Sum(x: number, y: number): void {
     console.log(x + y);
@@ -18,26 +36,32 @@ function Sum(x: number, y: number): void {
 
 // Sum(1, 2);
 
+
+
+
+// Let Scope
 function Scope() {
     for (let i = 0; i < 10; i++) {
         console.log(`Value: ${i}`);
     }
-    // console.log(i);
+    console.log(i);
 }
 
-// optional pram type
 
-function findAreaCirlce(r: number) {
+
+// Optional Prams
+
+function findAreaCirlce(r: number, xyz?: any) {
     let PI = 3.14;
     let total = PI * (r * r) + " cm";
     console.log(total);
 }
 
-// findAreaCirlce(20);
+findAreaCirlce(20);
 
 
 
-// enums
+// Enums
 
 enum Cars {
     Mehan = 100000,
@@ -46,13 +70,6 @@ enum Cars {
 }
 // console.log(Cars.Civic);
 
-
-// types assign 
-var Value;
-Value = 10;
-
-console.log((<number>value));
-console.log((Value as number));
 
 
 
