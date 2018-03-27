@@ -24,8 +24,8 @@ function Sum(x: number, y: number): void {
 }
 
 // Sum(1, 2);
-var DemoFunction: (a: string, b: string) => string = function (a: string, b: string): string {
-    return a + b;
+var DemoFunction: (a: string, b: string) => string = function (x, y) {
+    return x + y;
 }
 DemoFunction('abc', 'xyz');
 

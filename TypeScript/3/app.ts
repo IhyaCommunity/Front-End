@@ -2,10 +2,11 @@
     Optional Parameter
 */
 
-function findAreaCircle(r: number, xyz?: number) {
+function findAreaCircle(r: number, xyz?: string) {
     let PI: number = 3.14;
     let total = PI * (r * r) + " cm";
     console.log(total);
+    // console.log(xyz);    
 }
 
 // findAreaCircle(20);
@@ -21,11 +22,11 @@ function findAreaCircle(r: number, xyz?: number) {
     Default Parameter
 */
 
-function fullName(firstName?: string, lastName = 'Usman') {
+function fullName(firstName?: string, lastName: string = 'Usman') {
     console.log(`${firstName} ${lastName}`);
 }
-fullName('Ali'); // both are correct
-fullName('Ali', 'Umar');
+// fullName('Ali'); // both are correct
+// fullName('Ali', 'Umar');
 
 
 
@@ -53,8 +54,7 @@ function getList(...argNames: string[]) {
         console.log(`Args Names ${index} : ${argNames[index]}`);
     }
 }
-getList('TypeScript', 'JavaScript', 'C#', 'C++');
-
+// getList('TypeScript', 'JavaScript', 'C#', 'C++');
 
 
 
@@ -76,7 +76,26 @@ demoFunction('This is paragraph...');
 let demoFunction2: CallbackFunction = function (x: number, y: number): number {
     return x * y;
 }
-demoFunction2(12,1)
+demoFunction2(12, 1);
+
+
+
+type N = number;
+type S = string;
+type B = boolean;
+
+let xyz: N = 12;
+let abc: S = 'qwerty';
+let TypeScriptIsEasy: B = true;
+
+
+type Point = (x: N, y?: N) => N;
+
+
+let square: Point = (x) => {
+    return x * x;
+}
+
 
 
 

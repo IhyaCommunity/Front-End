@@ -5,6 +5,7 @@ function findAreaCircle(r, xyz) {
     var PI = 3.14;
     var total = PI * (r * r) + " cm";
     console.log(total);
+    // console.log(xyz);    
 }
 // findAreaCircle(20);
 /*
@@ -14,8 +15,8 @@ function fullName(firstName, lastName) {
     if (lastName === void 0) { lastName = 'Usman'; }
     console.log(firstName + " " + lastName);
 }
-fullName('Ali'); // both are correct
-fullName('Ali', 'Umar');
+// fullName('Ali'); // both are correct
+// fullName('Ali', 'Umar');
 /*
     Rest Parameter
 
@@ -39,7 +40,6 @@ function getList() {
         console.log("Args Names " + index + " : " + argNames[index]);
     }
 }
-getList('TypeScript', 'JavaScript', 'C#', 'C++');
 function demoFunction(value) {
 }
 demoFunction(12);
@@ -48,3 +48,9 @@ var demoFunction2 = function (x, y) {
     return x * y;
 };
 demoFunction2(12, 1);
+var xyz = 12;
+var abc = 'qwerty';
+var TypeScriptIsEasy = true;
+var square = function (x) {
+    return x * x;
+};
