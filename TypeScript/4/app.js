@@ -27,29 +27,37 @@ drawCube({
     z: 150
 });
 function fullname(prams) {
-    console.log("" + prams.firstName + prams.secondName);
+    // console.log(`${prams.firstName}${prams.secondName}`);
 }
 fullname({
     firstName: 'Type',
     secondName: 'Script'
 });
 function catVoice(voice) {
-    console.log(voice.cat);
+    // console.log(voice.cat);
 }
 catVoice({
     cat: 'Meaooooow!'
 });
 function crowVoice(voice) {
-    console.log(voice.crow);
+    // console.log(voice.crow);
 }
 crowVoice({
     crow: 'kkeaaaaaaan!'
 });
 function doggyVoice(voice) {
-    console.log(voice.doggy);
+    // console.log(voice.doggy);
 }
 doggyVoice({
     doggy: 'whaaaaaaof!'
+});
+function fb(prams) {
+    // console.log(prams);
+}
+fb({
+    age: 22,
+    name: 'Ali',
+    dataChori: true
 });
 function honda(pram) {
     // code logic

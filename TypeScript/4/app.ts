@@ -49,7 +49,7 @@ interface Fullname {
 }
 
 function fullname(prams: Fullname) {
-    console.log(`${prams.firstName}${prams.secondName}`);
+    // console.log(`${prams.firstName}${prams.secondName}`);
 }
 
 fullname({
@@ -66,21 +66,21 @@ interface AnimalVoice {
 }
 
 function catVoice(voice: AnimalVoice) {
-    console.log(voice.cat);
+    // console.log(voice.cat);
 }
 catVoice({
     cat: 'Meaooooow!'
 });
 
 function crowVoice(voice: AnimalVoice) {
-    console.log(voice.crow);
+    // console.log(voice.crow);
 }
 crowVoice({
     crow: 'kkeaaaaaaan!'
 });
 
 function doggyVoice(voice: AnimalVoice) {
-    console.log(voice.doggy);
+    // console.log(voice.doggy);
 }
 
 doggyVoice({
@@ -88,6 +88,36 @@ doggyVoice({
 });
 
 // example 4
+
+
+interface MyProfile {
+    age?: number,
+    name: string
+}
+
+interface Facebook extends MyProfile {
+    dataChori: any
+}
+
+interface LinkedIn extends MyProfile {
+    nokri: any
+}
+
+
+
+function fb(prams: Facebook) {
+    // console.log(prams);
+}
+
+fb({
+    age: 22,
+    name: 'Ali',
+    dataChori: true
+})
+
+
+
+
 
 // simple Polymorphic inheritance
 interface Bike { cc: string | number }

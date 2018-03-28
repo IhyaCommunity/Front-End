@@ -54,3 +54,19 @@ var TypeScriptIsEasy = true;
 var square = function (x) {
     return x * x;
 };
+var simpleFunction = function (z) {
+};
+// Complex Functional-Object Example
+var complex = {
+    data: [100, 4.99, 20],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
+    data: [50, 10.9, 233],
+    output: function (all) {
+        return this.data;
+    }
+};
+// console.log(complex2.data[0]);

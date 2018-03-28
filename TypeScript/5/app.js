@@ -21,19 +21,28 @@ var Animal = /** @class */ (function () {
 }());
 var animal = new Animal('kitty'); // contain memory on heap
 // console.log(animal);
-// console.log(animal.name)
+// console.log(animal.name);
 // console.log(animal.walk) // output: [Function]
 // animal.walk(12);
 // inherit base class to derived class
 var Snake = /** @class */ (function (_super) {
     __extends(Snake, _super);
-    function Snake(theName) {
-        return _super.call(this, theName) || this;
+    function Snake(SnakeName, Size) {
+        var _this = _super.call(this, SnakeName) || this;
+        _this.size = 0;
+        _this.size = Size;
+        return _this;
     }
+    Snake.prototype.SnakeSize = function () {
+        console.log(this.size);
+    };
     Snake.prototype.walk = function () {
         console.warn("Snakes don't walk.");
     };
     return Snake;
 }(Animal));
-var snake = new Snake('Python');
+var snake = new Snake('Python', 20);
+console.log(snake);
+// console.log(snake.name)
 // snake.walk()
+snake.SnakeSize();

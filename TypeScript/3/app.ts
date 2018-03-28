@@ -107,7 +107,6 @@ let simpleFunction = (z: myCustomType) => {
 // Complex Functional-Object Example
 let complex: { data: number[], output: (all: boolean) => number[] } = {
     data: [100, 4.99, 20],
-
     output: function (all: boolean): number[] {
         return this.data;
     }
