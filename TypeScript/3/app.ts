@@ -98,4 +98,7 @@ let square: Point = (x) => {
 
 
 
+type myCustomType = number | string | boolean;
+let simpleFunction = (z: myCustomType) => {
 
+}

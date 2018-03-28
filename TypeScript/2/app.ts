@@ -76,8 +76,14 @@ function Scope() {
 
 // An enum is a way to organize a collection of related values.
 enum Cars {
-    Mehan = 100000,
+    Mehan = 100000, // by default is 0
     Civic,
     City
 }
 // console.log(Cars.Civic);
+
+
+let move = 1;
+enum direction { up, right, down, left };
+if (move === direction.right) { } // move the player to right direction
+// console.log(direction.up);
