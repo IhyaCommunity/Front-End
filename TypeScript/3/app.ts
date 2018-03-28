@@ -102,3 +102,30 @@ type myCustomType = number | string | boolean;
 let simpleFunction = (z: myCustomType) => {
 
 }
+
+
+// Complex Functional-Object Example
+let complex: { data: number[], output: (all: boolean) => number[] } = {
+    data: [100, 4.99, 20],
+
+    output: function (all: boolean): number[] {
+        return this.data;
+    }
+}
+
+
+// complex = {};
+
+// Custom types or type alias
+
+type COMPLEX = { data: number[], output: (all: boolean) => number[] };
+
+let complex2: COMPLEX = {
+    data: [50, 10.9, 233],
+
+    output: function (all: boolean): number[] {
+        return this.data;
+    }
+};
+
+// console.log(complex2.data[0]);
