@@ -1,4 +1,6 @@
-// Classes
+/*
+    Classes
+*/
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -18,17 +20,17 @@ var Person = /** @class */ (function () {
 }());
 var person = new Person; // allocate memory
 // console.log(person.firstName, person.secondName);
-console.log(person instanceof Person);
+// console.log(person instanceof Person);
 var Wifi = /** @class */ (function () {
     function Wifi() {
         this.password = 0;
-        this.ssid = 'empty';
+        this.ssid = '';
     }
     Wifi.prototype.connect = function () {
         if (this.password == 0) {
             console.log('Enter password');
         }
-        else if (this.ssid == 'empty') {
+        else if (this.ssid == '') {
             console.log('Enter Wifi name');
         }
         else {
@@ -40,10 +42,10 @@ var Wifi = /** @class */ (function () {
     return Wifi;
 }());
 var wifi = new Wifi();
-wifi.ssid = 'FreeWifi';
-wifi.password = 123321;
+// wifi.ssid = 'Limited Access';
+// wifi.password = 123321;
 // wifi.connect();
-console.log(wifi instanceof Person); //  really? output: false
+// console.log(wifi instanceof Person); //  really? output: false
 // example 1
 var Animal = /** @class */ (function () {
     // Creating & Initializing object
@@ -61,7 +63,9 @@ var animal = new Animal('kitty'); // contain memory on heap
 // console.log(animal.name);
 // console.log(animal.walk) // output: [Function]
 // animal.walk(12);
-// inherit base class to derived class
+/*
+    inherit base class to derived class
+*/
 var Snake = /** @class */ (function (_super) {
     __extends(Snake, _super);
     function Snake(SnakeName, Size) {
@@ -99,6 +103,19 @@ var ListIndex = /** @class */ (function () {
     return ListIndex;
 }());
 var listIndex = new ListIndex();
+var FindArea = /** @class */ (function () {
+    function FindArea(w, h) {
+        this.width = w;
+        this.height = h;
+    }
+    FindArea.prototype.area = function () {
+        var total = this.height * this.width;
+        return total;
+    };
+    return FindArea;
+}());
+var findarea = new FindArea(12, 12);
+console.log(findarea.area() + ' m');
 var Point2D = /** @class */ (function () {
     function Point2D(x_axis, y_axis) {
         this.x = x_axis;

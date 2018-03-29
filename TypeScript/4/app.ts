@@ -8,7 +8,7 @@
 interface Point {
     x: number,
     y: number,
-    z?: number, // z index for 3-D
+    z?: number // z index for 3-D
 }
 
 // example-1
@@ -134,3 +134,6 @@ honda({
         return 0;
     }
 });
+
+
+

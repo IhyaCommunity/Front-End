@@ -13,8 +13,6 @@ console.log((isOk as boolean));
 
 
 
-
-
 /* 
     Types in Function
 */

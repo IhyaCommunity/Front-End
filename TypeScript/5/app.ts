@@ -6,35 +6,35 @@ class Person {
     firstName: string = 'Ali';
     secondName: string = 'Irfan';
 }
+
 let person: Person = new Person; // allocate memory
 // console.log(person.firstName, person.secondName);
 
-console.log(person instanceof Person);
-
+// console.log(person instanceof Person);
 
 
 class Wifi {
     password: number = 0;
-    ssid: string = 'empty';
+    ssid: string = '';
     connect() {
         if (this.password == 0) {
             console.log('Enter password');
-        } else if (this.ssid == 'empty') {
-            console.log('Enter Wifi name')
+        } else if (this.ssid == '') {
+            console.log('Enter Wifi name');
         } else {
-            console.log('User connect!')
+            console.log('User connect!');
             console.log('SSID: ' + this.ssid);
-            console.log('Password: ' + this.password)
+            console.log('Password: ' + this.password);
         }
     }
 }
 
-let wifi = new Wifi()
-wifi.ssid = 'FreeWifi';
-wifi.password = 123321;
+let wifi = new Wifi();
+// wifi.ssid = 'Limited Access';
+// wifi.password = 123321;
 // wifi.connect();
 
-console.log(wifi instanceof Person) //  really? output: false
+// console.log(wifi instanceof Person); //  really? output: false
 
 // example 1
 class Animal {
@@ -104,13 +104,35 @@ class ListIndex {
     }
 }
 
-let listIndex = new ListIndex()
-// listIndex.lists('a', 'b', 'c', 1, 2, 3, '\n');
+let listIndex = new ListIndex();
+// listIndex.lists('a', 'b', 'c', 1, 2, 3);
 // listIndex.lists(true, false);
 
 
 
+interface Area {
+    width: number,
+    height: number,
+    radius?: number,
+    area(): any
+}
 
+class FindArea implements Area {
+    width: number;
+    height: number;
+    constructor(w: number, h: number) {
+        this.width = w;
+        this.height = h;
+    }
+
+    area() {
+        let total = this.height * this.width;
+        return total;
+    }
+}
+
+let findarea = new FindArea(12,12);
+console.log(findarea.area() + ' m')
 
 
 
