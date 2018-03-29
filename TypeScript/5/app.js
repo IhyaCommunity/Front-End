@@ -18,6 +18,7 @@ var Person = /** @class */ (function () {
 }());
 var person = new Person; // allocate memory
 // console.log(person.firstName, person.secondName);
+console.log(person instanceof Person);
 var Wifi = /** @class */ (function () {
     function Wifi() {
         this.password = 0;
@@ -41,7 +42,8 @@ var Wifi = /** @class */ (function () {
 var wifi = new Wifi();
 wifi.ssid = 'FreeWifi';
 wifi.password = 123321;
-wifi.connect();
+// wifi.connect();
+console.log(wifi instanceof Person); //  really? output: false
 // example 1
 var Animal = /** @class */ (function () {
     // Creating & Initializing object

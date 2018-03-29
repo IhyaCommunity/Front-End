@@ -1,4 +1,6 @@
-// Classes
+/* 
+    Classes
+*/
 
 class Person {
     firstName: string = 'Ali';
@@ -7,6 +9,7 @@ class Person {
 let person: Person = new Person; // allocate memory
 // console.log(person.firstName, person.secondName);
 
+console.log(person instanceof Person);
 
 
 
@@ -29,8 +32,9 @@ class Wifi {
 let wifi = new Wifi()
 wifi.ssid = 'FreeWifi';
 wifi.password = 123321;
-wifi.connect();
+// wifi.connect();
 
+console.log(wifi instanceof Person) //  really? output: false
 
 // example 1
 class Animal {
@@ -55,7 +59,10 @@ let animal = new Animal('kitty'); // contain memory on heap
 // animal.walk(12);
 
 
-// inherit base class to derived class
+/* 
+    inherit base class to derived class
+*/
+
 class Snake extends Animal {
     size: number;
     constructor(SnakeName: string, Size: number = 0) {
@@ -110,7 +117,9 @@ let listIndex = new ListIndex()
 
 
 
-// Interfaces and Classes
+/* 
+    Interfaces and Classes
+*/
 
 interface Point {
     x: number,
@@ -162,3 +171,5 @@ class Point3D implements Point {
 let point3D = new Point3D(40, 33, 9);
 point3D.x = 10; // value redeclear
 // point3D.total();
+
+
