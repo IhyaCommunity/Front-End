@@ -1,3 +1,38 @@
+// Classes
+
+class Person {
+    firstName: string = 'Ali';
+    secondName: string = 'Irfan';
+}
+let person: Person = new Person; // allocate memory
+// console.log(person.firstName, person.secondName);
+
+
+
+
+class Wifi {
+    password: number = 0;
+    ssid: string = 'empty';
+    connect() {
+        if (this.password == 0) {
+            console.log('Enter password');
+        } else if (this.ssid == 'empty') {
+            console.log('Enter Wifi name')
+        } else {
+            console.log('User connect!')
+            console.log('SSID: ' + this.ssid);
+            console.log('Password: ' + this.password)
+        }
+    }
+}
+
+let wifi = new Wifi()
+wifi.ssid = 'FreeWifi';
+wifi.password = 123321;
+wifi.connect();
+
+
+// example 1
 class Animal {
     // Atribute or Property
     name: string;
@@ -22,8 +57,8 @@ let animal = new Animal('kitty'); // contain memory on heap
 
 // inherit base class to derived class
 class Snake extends Animal {
-    size: number = 0;
-    constructor(SnakeName: string, Size: number) {
+    size: number;
+    constructor(SnakeName: string, Size: number = 0) {
         super(SnakeName);
         this.size = Size;
     }
@@ -38,13 +73,92 @@ class Snake extends Animal {
 }
 
 let snake = new Snake('Python', 20);
-console.log(snake);
+// console.log(snake);
 // console.log(snake.name)
 // snake.walk()
-snake.SnakeSize()
+// snake.SnakeSize()
+
+
+
+
+
+
+
+
+
+
+// example 2
+
+class ListIndex {
+    lists(...args: any[]) {
+        for (let i = 0; i < args.length; i++) {
+            console.log(`Argument ${i} : ${args[i]}`)
+        }
+    }
+}
+
+let listIndex = new ListIndex()
+// listIndex.lists('a', 'b', 'c', 1, 2, 3, '\n');
+// listIndex.lists(true, false);
+
+
+
+
+
+
+
+
+
+
+// Interfaces and Classes
 
 interface Point {
     x: number,
     y: number,
     z?: number
 }
+
+class Point2D implements Point {
+    x: number;
+    y: number;
+
+    constructor(x_axis: number, y_axis: number) {
+        this.x = x_axis;
+        this.y = y_axis;
+    }
+
+    vector() {
+        console.log(`x: ${this.x}\ny: ${this.y}`)
+    }
+
+    product() {
+        console.log(`Total: ${this.x * this.y}`)
+    }
+}
+
+let point2D = new Point2D(10, 20);
+// point2D.vector();
+// point2D.product();
+
+
+class Point3D implements Point {
+    x: number;
+    y: number;
+    z: number;
+    constructor(X: number, Y: number, Z: number) {
+        this.x = X;
+        this.y = Y;
+        this.z = Z;
+    }
+
+    total() {
+        let product = this.x * this.y * this.z;
+        console.log(`Total: ${product}`)
+    }
+
+}
+
+
+let point3D = new Point3D(40, 33, 9);
+point3D.x = 10; // value redeclear
+// point3D.total();
