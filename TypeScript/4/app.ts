@@ -2,6 +2,7 @@
     Interfaces
 */
 
+// Duck Typeing
 
 // Always use Pascal notation
 interface Point {
@@ -100,7 +101,7 @@ interface Facebook extends MyProfile {
 }
 
 interface LinkedIn extends MyProfile {
-    nokri: any
+    job: any
 }
 
 
