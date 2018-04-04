@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validation</title>
+
+    <style>
+        input {
+            padding: .8rem;
+            font-size: 1rem;
+        }
+
+        input:invalid  {
+            background-color: lightcoral;
+        }
+
+        input:required  {
+            border: 4px dotted red;
+        }
+
+        input:valid  {
+            background-color: lightgreen;
+        }
+
+        input:optional  {
+            border: 4px dotted darkorange;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" name="" required>
+        <input type="email" name="">
+        
+        <br><br>
+        
+        <label>
+            Name: 
+            <input id="name" type="text">
+        </label>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
