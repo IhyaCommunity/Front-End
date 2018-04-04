@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Target</title>
+
+    <style>
+        p:target {
+            background-color: #eee;
+        }
+
+        .message {
+            display: none;
+        }
+
+        .message:target {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+
+    <ul>
+        <li><a href="#para-1">Paragraph 1</a></li>
+        <li><a href="#para-2">Paragraph 2</a></li>
+    </ul>
+
+    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam sed sit sequi accusamus quas, blanditiis quidem delectus magni repellat, a nostrum aliquid atque autem? Dolorem laudantium inventore optio cupiditate!</p>
+    <p id="para-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam beatae reiciendis fuga hic laborum soluta odit dolorum iste temporibus laudantium nam, corporis amet quaerat ea perspiciatis autem eaque consectetur et!</p>
+
+    <a href="#show-message">Show</a>
+    <a href="#hide-message">Hide</a>
+
+    <p id="show-message" class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+
+</body>
+</html>
