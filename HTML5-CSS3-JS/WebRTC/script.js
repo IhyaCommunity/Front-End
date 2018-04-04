@@ -29,5 +29,5 @@ if (navigator.mediaDevices.getUserMedia) {
 
 }
 else {
-    console.log("User Media is not supported by your browser or device");
+    console.log("User Media is not supported in your browser or device");
 }
