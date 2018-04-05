@@ -131,8 +131,8 @@ class FindArea implements Area {
     }
 }
 
-let findarea = new FindArea(12,12);
-console.log(findarea.area() + ' m')
+let findarea = new FindArea(12, 12);
+// console.log(findarea.area() + ' m')
 
 
 
@@ -193,5 +193,3 @@ class Point3D implements Point {
 let point3D = new Point3D(40, 33, 9);
 point3D.x = 10; // value redeclear
 // point3D.total();
-
-

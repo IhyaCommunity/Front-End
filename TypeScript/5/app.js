@@ -115,7 +115,6 @@ var FindArea = /** @class */ (function () {
     return FindArea;
 }());
 var findarea = new FindArea(12, 12);
-console.log(findarea.area() + ' m');
 var Point2D = /** @class */ (function () {
     function Point2D(x_axis, y_axis) {
         this.x = x_axis;

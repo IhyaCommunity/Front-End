@@ -57,8 +57,13 @@ var Human = /** @class */ (function () {
     function Human(name) {
         this.name = name;
     }
+    Human.prototype.myName = function () {
+        console.log(this.name);
+    };
     return Human;
 }());
+var human = new Human('Arslan');
+// human.name;
 var Person = /** @class */ (function (_super) {
     __extends(Person, _super);
     function Person(name) {
@@ -68,34 +73,6 @@ var Person = /** @class */ (function (_super) {
 }(Human));
 var person = new Person('Ali');
 // person.name // Property 'name' is protected and only accessible within class 'Human' and its subclasses.
+// person.myName()
+// human.myName()
 // console.log(person)
-/*
-    Encapsulation
-*/
-// Accessors
-// example-1
-var code = 'verySecurePassword';
-var Security = /** @class */ (function () {
-    function Security() {
-    }
-    Object.defineProperty(Security.prototype, "SecretCode", {
-        get: function () {
-            return this._code;
-        },
-        set: function (newCode) {
-            if (code == 'verySecurePassword') {
-                this._code = newCode;
-                console.log('Messege: Acces Granted with Code: ' + newCode);
-            }
-            else {
-                console.log('Messege: Acces Denied!');
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Security;
-}());
-var security = new Security();
-// security.SecretCode = 110;
-// example-2 

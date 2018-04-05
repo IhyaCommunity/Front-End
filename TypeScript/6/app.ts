@@ -16,6 +16,8 @@
 */
 
 
+
+
 class Bird {  // By default each member is public
     public name: string;
     public constructor(name: string) {
@@ -59,7 +61,14 @@ class Human {
     constructor(name: string) {
         this.name = name;
     }
+
+    myName() {
+        console.log(this.name);
+    }
 }
+let human = new Human('Arslan');
+// human.name;
+
 
 class Person extends Human {
     constructor(name: string) {
@@ -69,5 +78,6 @@ class Person extends Human {
 
 let person = new Person('Ali');
 // person.name // Property 'name' is protected and only accessible within class 'Human' and its subclasses.
+// person.myName()
+// human.myName()
 // console.log(person)
-
