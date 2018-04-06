@@ -2,7 +2,12 @@
 const socket = new WebSocket('ws://localhost:6502');
 
 socket.addEventListener('open', function (event) {
-    socket.send('Hey Server!');
+
+    document.getElementById('send-button').addEventListener('click', () => {
+        socket.send('Hey Server!');
+        console.log('Sent message to server');
+    });
+
 });
 
 socket.addEventListener('message', function (event) {

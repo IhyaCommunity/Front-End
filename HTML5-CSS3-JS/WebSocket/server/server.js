@@ -1,7 +1,8 @@
 var http = require('http');
+
 var WebSocketServer = require('websocket').server;
 
-var server = http.createServer(function(request, response) {
+var server = http.createServer((request, response) => {
     // No implementation
     // Change protocol to WebSocket or respond with 404
     response.writeHead(404);
@@ -9,12 +10,11 @@ var server = http.createServer(function(request, response) {
 });
 
 server.listen(6502, () => {
-    console.log((new Date()) + ' Server is listening on port 6502');
+    console.log(new Date() + ' Server is listening on port 6502');
 });
 
-
 wsServer = new WebSocketServer({
-  httpServer: server
+    httpServer: server
 });
 
 wsServer.on('request', (request) => {
@@ -27,6 +27,6 @@ wsServer.on('request', (request) => {
             console.log((new Date()) + ' Client Message: ' + message.utf8Data);
         }
 
-        connection.sendUTF('Yea, I am listening...')
+        connection.sendUTF('Yea, I am listening...');
     });
 });
