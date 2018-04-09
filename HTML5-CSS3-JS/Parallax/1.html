@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smooth Scrolling</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.4rem;
+            padding: 1rem;
+            color: #444;
+        }
+
+        main > header {
+            position: fixed;
+            top: 0;
+        }
+
+        section {
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        section header {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .alert {
+            font-size: 4rem;
+            transition: opacity 500ms ease-in-out 200ms;
+        }
+
+        .hide {
+            visibility: hidden;
+            opacity: 0;
+        }
+    </style>
+
+</head>
+
+<body id="site">
+
+    <main>
+        <header>
+            <h2>Smooth Scrolling</h2>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#section-1">One</a>
+                    </li>
+                    <li>
+                        <a href="#section-2">Two</a>
+                    </li>
+                    <li>
+                        <a href="#section-3">Three</a>
+                    </li>
+                    <li>
+                        <a href="#section-4">Four</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="section-1">
+            <header>
+                <h2>One</h2>
+            </header>
+
+        </section>
+
+        <section id="section-2">
+            <header>
+                <h2>Two</h2>
+                <a href="#site">Back to Top</a>
+            </header>
+
+        </section>
+
+        <section id="section-3">
+            <header>
+                <h2>Three</h2>
+                <a href="#site">Back to Top</a>
+            </header>
+
+        </section>
+
+        <section id="section-4">
+            <header>
+                <h2>Four</h2>
+                <a href="#" id="toView">Scroll into View</a>
+                <a href="#site">Back to Top</a>
+            </header>
+
+            <h2 class="alert hide">Don't miss the tea! 🍵</h2>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+
+        document.getElementById('toView').addEventListener('click', (e) => {
+            document.getElementById('section-4').scrollIntoView();
+
+            e.preventDefault();
+        });
+
+        requestScrollAnimation((pos) => {
+            var elAlert = document.querySelector('.alert');
+            var isVisible = isScrolledIntoView(elAlert, true);
+
+            if (isVisible) {
+                elAlert.classList.remove('hide');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
