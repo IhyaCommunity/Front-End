@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll Animation</title>
+
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            color: #fff;
+            padding: 2rem;
+            font-size: 1.5rem;
+            background-color: darkolivegreen;
+            position: absolute;
+        }
+
+        .box:nth-child(2) {
+            background-color: rgb(103, 33, 122);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    
+    <script src="script.js"></script>
+    <script>
+
+        var box1 = document.querySelector('.box');
+        var box2 = document.querySelector('.box:nth-child(2)');
+
+        requestScrollAnimation((pos) => {
+
+            animateBox1(pos);
+            animateBox2(pos);
+
+        });
+
+        function animateBox1(pos) {
+            var x = pos.y;
+            var y = pos.y * 2;
+
+            translateElement(box1, x, y);
+        }
+
+        function animateBox2(pos) {
+            var x = pos.y * 2;
+            var y = pos.y;
+
+            translateElement(box2, x, y);
+        }
+
+    </script>
+</body>
+</html>

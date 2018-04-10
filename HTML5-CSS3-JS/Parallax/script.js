@@ -3,19 +3,19 @@ var ticking = false;
 
 function requestScrollAnimation(callback) {
     window.addEventListener('scroll', (e) => {
-
+    
         scrollPos = {
             x: window.scrollX || window.pageXOffset,
             y: window.scrollY || window.pageYOffset
         };
     
         if (!ticking) {
-    
+            
             window.requestAnimationFrame((t) => {
                 callback(scrollPos);
                 ticking = false;
             });
-                
+            
             ticking = true;
         }
       
