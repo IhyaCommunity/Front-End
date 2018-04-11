@@ -1,26 +1,27 @@
 if (navigator.mediaDevices.getUserMedia) {
 
     var constraints = {
-        // video: {
-        //     width: { ideal: 1280 },
-        //     height: { ideal: 720 },
-        //     facingMode: "user"
-        // },
+        video: {
+            width: { ideal: 1280 },
+            height: { ideal: 720 },
+            facingMode: "user"
+        },
         video: true,
         audio: true
     };
 
     navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-        var video = document.querySelector('video');
+        // var media = document.querySelector('audio');
+        var media = document.querySelector('video');
 
         try {
-            video.srcObject = stream;
+            media.srcObject = stream;
         } catch (error) {
-            video.src = URL.createObjectURL(stream);
+            media.src = URL.createObjectURL(stream);
         }
 
-        // video.onloadedmetadata = function(e) {
-        //     video.play();
+        // media.onloadedmetadata = function(e) {
+        //     media.play();
         // };
 
     }).catch((err)  =>  {
