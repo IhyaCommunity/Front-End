@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fixed Background</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.8rem;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 5rem;
+        }
+
+        .section {
+            display: flex;
+            min-height: 100vh;
+            padding: 2rem;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .section:first-child {
+            background-image: url('image/photo-1.jpg');
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section:nth-child(2) {
+            background-image: url('image/photo-2.jpg');
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section:nth-child(3) {
+            color: #000;
+            flex-direction: column;
+            background-image: url('image/photo-3.jpg');
+            background-position: bottom;
+        }
+
+        .section:nth-child(4) {
+            min-height: 4rem;
+            background: #222;
+            align-items: center;
+        }
+
+        .section:nth-child(4) h2 {
+            margin: 2rem 4rem 2rem 0;
+        }
+
+    </style>
+
+</head>
+
+<body id="site">
+
+    <main>
+
+        <section class="section">
+            <header>
+                <h2>One</h2>
+                <h4>Lorem ipsum dolor, sit amet elit?</h4>
+            </header>
+
+        </section>
+
+        <section class="section">
+            <header>
+                <h2>Two</h2>
+                <h4>Rerum distinctio ipsa</h4>
+            </header>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi veniam quia quam nam vel.</p>
+        </section>
+
+        <section class="section">
+            <header>
+                <h2>Three</h2>
+                <h4>Rerum distinctio ipsa</h4>
+            </header>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </section>
+
+        <section class="section">
+            <header>
+                <h2>Four</h2>
+            </header>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi veniam quia quam nam vel.</p>
+        </section>
+    </main>
+
+</body>
+
+</html>
