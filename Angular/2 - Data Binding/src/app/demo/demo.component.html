@@ -1,0 +1,83 @@
+<div class='first'>
+    <h2>1 - Interpolation:</h2>
+    <span>{{messege}}</span> <br>
+    <span>{{showMessege()}}</span>
+
+    <div class='colors'>
+        <h3>Colors:</h3>
+        <span>{{color.r}}</span><br>
+        <span>{{color.g}}</span><br>
+        <span>{{color.b}}</span><br>
+    </div>
+</div>
+
+<br>
+
+<div class='second'>
+    <h2>2 - Property Binding:</h2>
+
+    <a [href]="'https://fb.com/' + institute" target="_blank">SkyImpel Facebook page.</a> <br> <br>
+   
+    <span [innerHTML]='messege'></span> <br><br>
+   
+    <span [textContent]="'Hello ' + name + '!'"></span> <br><br>
+   
+    <input type="text" [value]="val"> <br><br>
+   
+    <span [hidden]='true'>abc</span>
+   
+    <!-- first method -->
+    <img src="{{imgUrl}}"> 
+   
+    <!-- second method -->
+    <img [src]="imgUrl"> <br><br>
+
+    <img src="{{imgUrl}}" [attr.width] = 40>
+    <img [src]="imgUrl" [width]="size.width">
+
+    <span [style.color]='color.g | lowercase'>{{messege}}</span>
+
+</div>
+
+<br>
+
+<div class="third">
+    <h2>3 - Event Binding:</h2>
+    <button (click)="showAlert()">Alert!</button>
+
+    <div class='counter'>
+        <button (click)="counter()">Count</button>
+        <span>Count: {{count}}</span>
+    </div>
+
+    <button (click)="events($event)">Show all events</button>
+
+    <div class="keyevent">
+        <!-- old way -->
+        <input type="text" (keyup)="onKeyUp($event)"> <br>
+        <!-- ng way -->
+        <input type="text" (keyup.enter)="enterKey()"> <br>
+
+        <!-- #<var name> template variables -->
+        <input type="text" #email (keyup.enter)="showValueData(email.value)">
+    </div>
+
+</div>
+
+<br>
+
+<div class="forth">
+    <h2>4 - Two-way Binding:</h2>
+
+    <div class="custom">
+        <h3>Custom two-way Binding:</h3>
+        <input [value]="data" (keyup.enter)="data = $event.target.value; CustomTwoWayBinding()">
+    </div>
+    <br>
+
+    <h3>Buit-in two-way Binding:</h3>
+    <!-- Special Syntex of Two-way binding -->
+    <input type="text" [(ngModel)]="demo" (keyup.enter)="showDemoData()">
+    <span>Data: {{demo}}</span>
+</div>
+
