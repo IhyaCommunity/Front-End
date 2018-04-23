@@ -1,0 +1,50 @@
+<div>
+    <ul>
+
+        <li>{{text | uppercase}}</li>
+        <li>{{text2 | lowercase}}</li>
+        <br>
+
+        <li>{{floatValue | number:'1.1-2'}}</li>
+        <li>{{floatValue | number:'1.2-3'}}</li>
+        <li>{{floatValue | number:'1.1-1'}}</li>
+        <li>{{floatValue | number:'02.2'}}</li>
+        <br>
+
+        <li>{{value}}</li>
+        <li>{{value | number}}</li>
+        <li>{{value2}}</li>
+        <li>{{value2 | number}}</li>
+        <br>
+
+        <li>{{progress | percent}}</li>
+        <li>{{progress2 | percent}}</li>
+        <li>{{progress3 | percent}}</li>
+        <li>{{progress4 | percent}}</li>
+        <br>
+
+        <li>{{price | currency}}</li>
+        <li>{{price | currency:'PKR '}}</li>
+        <li>{{floatValue | currency:'PKR ':true:'1.0'}}</li>
+        <li>{{floatValue | currency}}</li>
+        <br>
+
+        <!-- https://angular.io/api/common/DatePipe -->
+        <li>{{currentDate}}</li>
+        <li>{{currentDate | date}}</li>
+        <li>{{currentDate | date:'shortDate'}}</li>
+        <li>{{currentDate | date:'longDate'}}</li>
+        <br>
+
+        <li>{{months}}</li>
+        <li>{{months | slice:1:3}}</li>
+        <li>{{months | slice:9:10}}</li>
+        <br>
+
+        <li>{{userData}}</li>
+        <li>{{userData | json}}</li>
+        <li>{{userData.adress | json}}</li>
+        
+
+    </ul>
+</div>
