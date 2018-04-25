@@ -1,0 +1,124 @@
+<div class="ng-if">
+    <h2>ngIf</h2>
+    <div class="first-condition">
+        <div *ngIf="value > 0">
+            Value have some data...
+        </div>
+        <div *ngIf="value == 0">
+            Value is 0
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="second-condtion">
+        <div *ngIf="data.names.length > 0;then namesList else noNames">
+            <!-- List of names: {{data.names}} -->
+        </div>
+
+        <ng-template #namesList>
+            List of names: {{data.names}}
+        </ng-template>
+
+        <ng-template #noNames>
+            No names yet
+        </ng-template>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- <div class="third-condition">
+        <span *ngIf="arr.length > 0">{{text}}</span>
+        <br>
+        <span *ngIf="arr.length > 0 ? arr.push('chaar'): null">{{text}}</span>
+        <span *ngIf="arr.length == 3">This is array condition...</span>
+        <span [hidden]="isDone">{{text}}</span>
+    </div> -->
+
+</div>
+
+
+
+<br>
+<br>
+<br>
+
+
+
+<div class="switch">
+
+    <h2>ngSwitch</h2>
+
+    <div class="switch-component">
+        <a (click)="viewMode = 'a'">Tab-1</a>
+        <a (click)="viewMode = 'b'">Tab-2</a>
+    </div>
+    <br>
+
+    <div [ngSwitch]="viewMode" class="cases">
+        <div *ngSwitchCase="'a'" class="case-a">
+            Angular is awesome!
+        </div>
+        <div *ngSwitchCase="'b'" class="case-b">
+            Angular is fast!
+        </div>
+        <div *ngSwitchDefault>
+            Angular is UI Framework
+        </div>
+    </div>
+
+</div>
+<br>
+<br>
+
+
+<div class="ng-for">
+    <h2>ngFor</h2>
+    <ul *ngFor="let data of someData">
+        <li>{{data}}</li>
+    </ul>
+
+    <br>
+    <br>
+
+    <ul *ngFor="let data of someData; even as isDone">
+        <li>{{data}}</li>
+        <span *ngIf="isDone">Even Number</span>
+    </ul>
+
+    <br>
+    <br>
+
+    <ul *ngFor="let data of someData; odd as isDone">
+        <li>{{data}}</li>
+        <span *ngIf="isDone">Even Number</span>
+    </ul>
+
+    <br>
+    <br>
+
+    <div>
+        <button (click)="onAdd()">Add</button>
+
+        <ul>
+            <li *ngFor="let product of products">
+                {{product.name}}
+                <!-- <button (click)="onChange(product)">Remove</button> -->
+                <button (click)="onRemove(product)">Remove</button>                
+            </li>
+        </ul>
+
+    </div>
+</div>

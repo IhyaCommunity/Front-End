@@ -1,0 +1,47 @@
+h2 {
+    background-color: gray;
+    color: white;
+    padding: .5em;
+}
+
+.switch-component {
+    @btnColor: rgb(64, 64, 173);
+    a {
+        color: green;
+        background-color: @btnColor;
+        color: white;
+        padding: .4em 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 4px;
+    }
+    a:hover {
+        background-color: lighten(@btnColor, 45%);
+        color: @btnColor;
+    }
+    a:active {
+        border: 1px solid gray;
+    }
+}
+
+.cases {
+    .case-a {
+        color: green;
+    }
+    .case-b {
+        color: hotpink;
+    }
+}
+
+.ng-for {
+    ul {
+        span {
+            color: lightgrey;
+            background-color: dimgray;
+        }
+    }
+}
+
+.no-display {
+    display: none;
+}
