@@ -1,0 +1,30 @@
+.component {
+    @btnColor: darkslategrey;
+    a {
+        background-color: @btnColor;
+        color: white;
+        border-radius: 5px;
+        padding: .7em 1em;
+        cursor: pointer;
+    } 
+    a:hover {
+        background-color: lighten(@btnColor,20%);
+    }
+
+    .case-a {
+        color: rgb(179, 219, 111);
+        background-color: rgb(37, 36, 36);
+        padding: .5em 1em;
+    }
+    .case-b {
+        color: rgb(125, 206, 206);
+        padding: .5em 1em;
+        background-color: rgb(65, 49, 49);
+    }
+
+    .case-default {
+        color: rgb(214, 132, 132);
+        padding: .5em 1em;
+        background-color: rgb(75, 51, 51);
+    }
+}
